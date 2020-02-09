@@ -14,8 +14,8 @@ const Button = styled.button`
     background-color:inherit;
     cursor:pointer;
     outline:none;
-    padding-bottom:11px;
-    padding-top:36px;
+    margin-top:34px;
+    margin-bottom:11px;
     font-family: Muli;
     font-style: normal;
     font-weight: 600;

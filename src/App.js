@@ -4,7 +4,9 @@ import Streamer from './components/streamer';
 function App() {
   return (
     <div className="App" style = {{backgroundColor:'#E8E6E3'}}>
-      <Streamer/>
+      <div style = {{width:'87.5em',margin:'auto'}}>
+        <Streamer/>
+      </div>
     </div>
   );
 }

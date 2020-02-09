@@ -7,10 +7,26 @@ import uuid from 'uuid/v4';
 
 const Container = styled.div`
     display:flex;
-    background-color:#Fcd7C59F;
+    // background-color:#Fcd7C59F;
     margin:auto;
-    width:92.17%;
     overflow-x:overlay;
+    padding-bottom: 74px;
+    &::-webkit-scrollbar{
+        width: 0.4em;
+        background-color: #F5F5F5;
+        };
+        &::-webkit-scrollbar-track{
+        boxShadow: inset 0 0 6px rgba(0,0,0,0.00);
+        webkitBoxShadow: inset 0 0 6px rgba(0,0,0,0.00);
+        background-color: #F5F5F5;
+        };
+        &::-webkit-scrollbar-thumb{
+        backgroundColor: rgba(0,0,0,.1);
+        outline: 1px solid slategrey;
+        border-radius: 10px;
+        background-color: #555;
+        };
+    // width:92.17%;
 `;
 
 export class Streamer extends Component {

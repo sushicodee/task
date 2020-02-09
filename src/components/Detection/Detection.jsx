@@ -41,6 +41,8 @@ const DetectionName = styled.span`
     display: flex;
     flex-direction:column;
     letter-spacing: 0.2px;
+    text-align: center;
+    color:#2B518E;
 `;
 export class Detection extends Component {
 
@@ -60,7 +62,7 @@ export class Detection extends Component {
                     >
                         <ButtonWrapper>
                             <button  
-                                style = {{outline:'inherit',backgroundColor:'inherit',border:'none', zIndex:'5'}} 
+                                style = {{padding:0,outline:'inherit',backgroundColor:'inherit',border:'none', zIndex:'5'}} 
                                 monitorid = {this.props.monitorId}
                                 detectionid = {this.props.detection.id} 
                                 onClick = {(e) => this.props.handleRemoveDetection(e)}

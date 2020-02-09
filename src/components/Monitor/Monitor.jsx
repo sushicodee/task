@@ -7,8 +7,9 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import AddDetection from '../../utils/modals';
 
 const Container = styled.div`
-    margin:14px;
-    width:261px;
+    margin-right:8px;
+    // width:261px;
+    min-width: 238px;
     height:526px;
     display:flex;
     flex-direction:column;
@@ -18,14 +19,14 @@ const Container = styled.div`
 
 const Header = styled.h3`
     padding-bottom:0px;
-    color:#0A2239;
     display:flex;
     justify-content:space-between;
+    position:relative;
 `;
 
 const Zone = styled.h4`
     padding-left:16px;
-    color:#0A2239;
+    color:#2B518E;
     margin-top:-6px;
     font-size: 14px;
     line-height: 20px;
@@ -74,7 +75,7 @@ const Ip = styled.div`
     font-style: normal;
     font-weight: 600;
     font-size: 17px;
-    line-height: 20px;
+    line-height: 40px;
     letter-spacing: 0.2px;
     color: #2B518E;
     margin-top:10px;
@@ -108,13 +109,13 @@ export class Monitor extends Component {
             <Container>
                 <Header>
                     <Ip>
-                    IP {this.props.monitor.ipAddress}
-                         <span>
-                        <SignalWifi0BarIcon/>
+                    IP {this.props.monitor.ipAddress.split('.').join(' ')}
+                         <span style ={{position:'absolute', marginTop:'4px',paddingLeft:'10px'}}>
+                        <SignalWifi0BarIcon style ={{fontSize:'20px'}}/>
                         </span>
                     </Ip>
                     <div>
-                        <SettingsButton><MoreHorizIcon/></SettingsButton>
+                        <SettingsButton backgroundCOlor = ''><MoreHorizIcon/></SettingsButton>
                     </div>
                 </Header>
                 <Zone>
