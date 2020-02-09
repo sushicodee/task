@@ -2,13 +2,7 @@ import React, { Component } from 'react'
 import styled from 'styled-components';
 import Detection from '../Detection';
 import {Droppable} from 'react-beautiful-dnd';
-// import { SignalWifi0BarIcon,SignalWifi1BarIcon,SignalWifi2BarIcon,SignalWifi3BarIcon,SignalWifi4BarIcon} from '@material-ui/icons';
 import SignalWifi0BarIcon from '@material-ui/icons/SignalWifi0Bar';
-// import SignalWifi1BarIcon from '@material-ui/icons/SignalWifi1Bar';
-// import SignalWifi2BarIcon from '@material-ui/icons/SignalWifi2Bar';
-// import SignalWifi3BarIcon from '@material-ui/icons/SignalWifi3Bar'; 
-// import SignalWifi4BarIcon from '@material-ui/icons/SignalWifi4Bar';
-
 import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import AddDetection from '../../utils/modals';
 
@@ -69,12 +63,6 @@ const DetectionList = styled.div`
     };
 `;
 
-// const AddDetection = styled.div`
-//     padding:8px;
-//     margin-bottom:8px;
-//     background-color:white;
-// `;
-
 export class Monitor extends Component {
 
     
@@ -118,9 +106,6 @@ export class Monitor extends Component {
                     )}
                 </Droppable>
                 <AddDetection monitorId = {this.props.monitor.id} allDetections = {this.props.allDetections} addDetection = {this.props.addDetection}/>
-                {/* <AddDetection>
-                    <button style = {{border:'none',color:'#0A2239',backgroundColor:'inherit'}}>+ Add detection</button>
-                </AddDetection> */}
             </Container>
         )
     }

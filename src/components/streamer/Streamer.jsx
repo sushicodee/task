@@ -7,7 +7,7 @@ import uuid from 'uuid/v4';
 
 const Container = styled.div`
     display:flex;
-    background-color:#F7C59F;
+    background-color:#Fcd7C59F;
     margin:auto;
     width:88.6em;
 `;
@@ -44,12 +44,7 @@ export class Streamer extends Component {
         const monitor = this.state.monitors[monitorId];
         const newDetectionIds = [...monitor.detectionIds];
         console.log('detectionIds',newDetectionIds);
-        // newDetectionIds.forEach(detection => {
-        //     console.log(detectionId,detection.target);
-        //     if(detection.target === detectionId){
-                
-        //     }
-        // })\
+ 
         let isUnique = this.handleCheckUniqueForAddDetection(newDetectionIds,detectionId);
         if(isUnique){
             newDetectionIds.push({id:uuid(),target:detectionId});
