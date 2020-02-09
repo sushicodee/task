@@ -16,6 +16,11 @@ const Button = styled.button`
     outline:none;
     padding-bottom:11px;
     padding-top:36px;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px
 `;
 
 const ModalCard = styled.div`
@@ -31,9 +36,10 @@ const ModalCard = styled.div`
 
 const ModalContainer = styled.div `
     padding:8px;
-    padding-top:10px;
+    padding-top:5px;
     marginBottom:8px;
     background-color:white;
+    border-radius: 5px;
 `;
 
 const DetectionList = styled.ul`

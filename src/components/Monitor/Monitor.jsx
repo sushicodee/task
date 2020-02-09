@@ -13,7 +13,7 @@ const Container = styled.div`
     display:flex;
     flex-direction:column;
     background-color:white;
-    border-radius:4px;
+    border-radius:5px;
 `;
 
 const Header = styled.h3`
