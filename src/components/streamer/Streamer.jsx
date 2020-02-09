@@ -9,7 +9,8 @@ const Container = styled.div`
     display:flex;
     background-color:#Fcd7C59F;
     margin:auto;
-    width:88.6em;
+    width:92.17%;
+    overflow-x:overlay;
 `;
 
 export class Streamer extends Component {

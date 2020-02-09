@@ -7,8 +7,9 @@ import MoreHorizIcon from '@material-ui/icons/MoreHoriz';
 import AddDetection from '../../utils/modals';
 
 const Container = styled.div`
-    margin:8px;
-    width:280px;
+    margin:14px;
+    width:261px;
+    height:526px;
     display:flex;
     flex-direction:column;
     background-color:white;
@@ -16,7 +17,6 @@ const Container = styled.div`
 `;
 
 const Header = styled.h3`
-    padding:8px;
     padding-bottom:0px;
     color:#0A2239;
     display:flex;
@@ -24,21 +24,24 @@ const Header = styled.h3`
 `;
 
 const Zone = styled.h4`
-    padding-left:8px;
+    padding-left:16px;
     color:#0A2239;
-    margin:0;
+    margin-top:-6px;
+    font-size: 14px;
+    line-height: 20px;
+    padding-bottom:16px;
 `;
 
 
 const Video = styled.div`
     height:150px;
-    margin:8px;
+    margin:0 16px 12px;
     background-color:black;
     border-radius:4px;
+    margin-bottom:32px;
 `;
 
 const DetectionList = styled.div`
-    padding:8px;
     background-color: ${props => (props.isDraggingOver ? 'white' : 'white')};
     transition: background-color 0.2s ease;
     flex-grow:1;
@@ -63,6 +66,32 @@ const DetectionList = styled.div`
     };
 `;
 
+const Ip = styled.div`
+    margin-left:16px;
+    width: 150px;
+    height: 35px;
+    font-family: Muli;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 20px;
+    letter-spacing: 0.2px;
+    color: #2B518E;
+    margin-top:10px;
+    &::span{
+            font-size:20px;
+    }
+`;
+
+const SettingsButton = styled.div`
+    backgroundColor:transparent;
+    border:none;
+    outline:none;
+    color:#0A2239;
+    margin-top:17px;
+    margin-right:14px;
+`;
+
 export class Monitor extends Component {
 
     
@@ -78,11 +107,14 @@ export class Monitor extends Component {
         return(
             <Container>
                 <Header>
+                    <Ip>
+                    IP {this.props.monitor.ipAddress}
+                         <span>
+                        <SignalWifi0BarIcon/>
+                        </span>
+                    </Ip>
                     <div>
-                    {this.props.monitor.ipAddress} <SignalWifi0BarIcon/>
-                    </div>
-                    <div>
-                        <button style = {{backgroundColor:'transparent', border:'none', outline:'none', color:'#0A2239'}}><MoreHorizIcon/></button>
+                        <SettingsButton><MoreHorizIcon/></SettingsButton>
                     </div>
                 </Header>
                 <Zone>

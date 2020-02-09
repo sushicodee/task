@@ -6,13 +6,16 @@ import styled from 'styled-components';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from "@material-ui/core/Backdrop";
 import Fade from "@material-ui/core/Fade";
+import AddIcon from '@material-ui/icons/Add';
 
 const Button = styled.button`
     border:none;
-    color:#0A2239;
+    color:#2B518E;
     background-color:inherit;
     cursor:pointer;
     outline:none;
+    padding-bottom:11px;
+    padding-top:36px;
 `;
 
 const ModalCard = styled.div`
@@ -28,6 +31,7 @@ const ModalCard = styled.div`
 
 const ModalContainer = styled.div `
     padding:8px;
+    padding-top:10px;
     marginBottom:8px;
     background-color:white;
 `;
@@ -111,8 +115,8 @@ export class AddDetection extends Component {
         console.log(detectionsArray);
         return (
             <ModalContainer>
-                <Button style = {{border:'none',color:'#0A2239',backgroundColor:'inherit'}} onClick = {this.handleOpen}>
-                    + Add Detection
+                <Button style = {{border:'none',color:'#2B518E',backgroundColor:'inherit'}} onClick = {this.handleOpen}>
+                    <AddIcon style ={{fontSize:'12px'}}/> Add Detection
                 </Button>
                 <Modal
                 aria-labelledby="transition-modal-title"

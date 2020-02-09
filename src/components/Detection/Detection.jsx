@@ -6,19 +6,21 @@ import CloseIcon from '@material-ui/icons/Close';
 const Container = styled.div`
     position:relative;
     padding:16px;
-    border-radius:4px;
-    text-align:center;
-    margin: 1px 10px;
-    margin-bottom:8px;
-    font-weight:bold;
+    border-radius:5px;
+    margin-left:16px;
+    margin-right:14px;
+    margin-bottom:11.13px;
     border-left:20px solid ${props => props.allDetections[props.detection.target].color};
     border-right:20px solid ${props => props.allDetections[props.detection.target].color};
-    -webkit-box-shadow: 0 4px 6px -1px #222;
-    -moz-box-shadow: 0 4px 6px -1px #222;
-    box-shadow: 0 4px 6px -1px #222;
+    -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     background-color:white;
     color: ${props => (props.isDragging ? '#0A2239' :'#0A2239')}
-    font-weight:500;
+    height: 60.87px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
 `;
 // background-color:${props =>( props.isDragging? 'white' : 'white')};
 
@@ -30,6 +32,16 @@ border: none;
 background-color: transparent;
 `;
 
+const DetectionName = styled.span`
+    font-family:Muli;
+    font-style:normal;
+    font-weight:600;
+    font-size:15px;
+    line-height:20px;
+    display: flex;
+    flex-direction:column;
+    letter-spacing: 0.2px;
+`;
 export class Detection extends Component {
 
     render() {
@@ -52,10 +64,12 @@ export class Detection extends Component {
                                 monitorid = {this.props.monitorId}
                                 detectionid = {this.props.detection.id} 
                                 onClick = {(e) => this.props.handleRemoveDetection(e)}
-                                ><CloseIcon style = {{fontSize:'16px',cursor:'pointer'}}/></button>
+                                ><CloseIcon style = {{fontSize:'16px',cursor:'pointer',color:'#C4C4C4'}}/></button>
                         </ButtonWrapper>
                         {/* {this.props.detection.detectionName} */}
+                        <DetectionName>
                         {this.props.allDetections[this.props.detection.target].detectionName}
+                        </DetectionName>
                     </Container>
                 )}
             </Draggable>

@@ -3,7 +3,7 @@ import Streamer from './components/streamer';
 
 function App() {
   return (
-    <div className="App" style = {{backgroundColor:'#F7C59'}}>
+    <div className="App" style = {{backgroundColor:'#E8E6E3'}}>
       <Streamer/>
     </div>
   );
