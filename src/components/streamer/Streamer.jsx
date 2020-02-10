@@ -12,19 +12,26 @@ const Container = styled.div`
     overflow-x:overlay;
     padding-bottom: 74px;
     &::-webkit-scrollbar{
-        width: 0.4em;
-        background-color: #F5F5F5;
+        width:456px;
+        height: 11px;
         };
         &::-webkit-scrollbar-track{
         boxShadow: inset 0 0 6px rgba(0,0,0,0.00);
         webkitBoxShadow: inset 0 0 6px rgba(0,0,0,0.00);
         background-color: #F5F5F5;
+        margin:0 472px;
+        border-radius: 20px;
         };
         &::-webkit-scrollbar-thumb{
         backgroundColor: rgba(0,0,0,.1);
         outline: 1px solid slategrey;
-        border-radius: 10px;
+        border-radius: 20px;
         background-color: #555;
+        width: 11px;
+        };
+        ::-webkit-scrollbar-track-piece {
+            height: 30px;
+            width: 30px;
         };
     // width:92.17%;
 `;
